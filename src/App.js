@@ -2,13 +2,20 @@ import './App.css';
 import Home from './pages/Home';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
+import { useState } from 'react';
+import Contact from './pages/Contact';
+import About from './pages/About';
 
 function App() {
+  const [user, setUser] = useState();
+
   return (
     <BrowserRouter>
       <Navbar/>
       <Routes>
         <Route path="/" element={<Home/>}/>
+        <Route path="/about" element={<About/>}/>
+        <Route path="/contact" element={<Contact/>}/>
       </Routes>
     </BrowserRouter>
   )
