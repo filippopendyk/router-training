@@ -1,8 +1,10 @@
 import React from "react";
 import { Outlet } from 'react-router-dom';
 
-const Profile = () => {
+const SharedProfileLayout = () => {
     return (
         <Outlet/>
     )
 }
+
+export default SharedProfileLayout;
