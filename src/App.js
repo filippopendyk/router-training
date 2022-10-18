@@ -16,6 +16,10 @@ function App() {
         <Route path="/" element={<Home/>}/>
         <Route path="/about" element={<About/>}/>
         <Route path="/contact" element={<Contact/>}/>
+        <Route path="/profile" element={<SharedProfileLayout/>}>
+          <Route index element={<Profile/>}/>
+          <Route path="/edit" element={<EditProfile/>}/>
+        </Route>
       </Routes>
     </BrowserRouter>
   )
